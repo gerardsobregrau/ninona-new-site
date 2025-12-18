@@ -19,7 +19,22 @@ export default {
           yellow: '#ffed00', // Approx atom yellow/mix
           blue: '#009fe3',   // Approx atom blue
         }
-      }
+      },
+      keyframes: {
+        'text-gradient': {
+          '0%, 100%': {
+            'background-size': '200% 200%',
+            'background-position': 'left center'
+          },
+          '50%': {
+            'background-size': '200% 200%',
+            'background-position': 'right center'
+          },
+        },
+      },
+      animation: {
+        'gradient-slow': 'text-gradient 1s ease infinite',
+      },
     },
   },
   plugins: [],

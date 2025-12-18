@@ -8,7 +8,7 @@ const Column = ({ title, subtitle, color, delay }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.3 }}
             transition={{ duration: 0.8, delay }}
-            className="flex-1 min-h-[80vh] flex flex-col items-center justify-center border-r border-white/10 last:border-r-0 hover:bg-white/5 transition-colors duration-500 group relative overflow-hidden"
+            className="flex-1 min-h-[80vh] flex flex-col items-center justify-center border-r border-white/10 last:border-r-0 hover:bg-white/5 transition-colors duration-500 group relative overflow-hidden px-8 md:px-12"
         >
             {/* Hover Glow Effect */}
             <div className={`absolute inset-0 bg-${color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} style={{ backgroundColor: color }}></div>
@@ -29,7 +29,7 @@ const Column = ({ title, subtitle, color, delay }) => {
 
 const ThreeColumns = () => {
     return (
-        <div className="relative w-full min-h-screen flex flex-col md:flex-row z-10 bg-black pt-20">
+        <div className="relative w-full min-h-screen flex flex-col md:flex-row z-10 bg-transparent pt-20 px-4 md:px-0">
             <Column title="Ninona" subtitle="Comedia" color="#aacc00" delay={0.2} />
             <Column title="Fina" subtitle="Festivales" color="#e6007e" delay={0.4} />
             <Column title="International" subtitle="Mundial" color="#f39200" delay={0.6} />
