@@ -23,35 +23,55 @@ const AtomCanvas = ({ isDecomposed }) => {
 
     return (
         <div className={`fixed inset-0 pointer-events-none z-0 flex items-center justify-center transition-opacity duration-1000 ${isDecomposed ? 'opacity-100' : 'opacity-40'}`}>
-            <div className="relative w-[800px] h-[800px] blur-sm">
-                {/* Ring 1: Green/Yellow */}
+            <div className="relative w-[800px] h-[800px]">
+                {/* Petal 1: Green */}
                 <motion.div
-                    className="absolute inset-0 border-[20px] border-ninona-green rounded-[50%] opacity-60 mix-blend-screen"
-                    animate={isDecomposed ? "decomposed" : { rotate: 360, scale: [1, 1.05, 1] }}
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[700px] border-[30px] border-ninona-green rounded-[50%] opacity-80 mix-blend-screen bg-transparent"
+                    animate={isDecomposed ? "decomposed" : { scale: [1, 1.05, 1], filter: ["blur(2px)", "blur(4px)", "blur(2px)"] }}
                     variants={ringVariants}
                     custom={{ x: -400, y: 400, rotate: 45 }}
-                    transition={isDecomposed ? {} : { rotate: { duration: 20, repeat: Infinity, ease: "linear" }, scale: { duration: 5, repeat: Infinity } }}
+                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                     style={{ rotate: 0 }}
                 />
 
-                {/* Ring 2: Pink/Lilac */}
+                {/* Petal 2: Pink */}
                 <motion.div
-                    className="absolute inset-0 border-[20px] border-ninona-pink rounded-[50%] opacity-60 mix-blend-screen"
-                    animate={isDecomposed ? "decomposed" : { rotate: 360, scale: [1, 1.1, 1] }}
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[700px] border-[30px] border-ninona-pink rounded-[50%] opacity-80 mix-blend-screen bg-transparent"
+                    animate={isDecomposed ? "decomposed" : { scale: [1, 1.1, 1], filter: ["blur(2px)", "blur(4px)", "blur(2px)"] }}
                     variants={ringVariants}
-                    custom={{ x: 0, y: 400, rotate: -45 }}
-                    transition={isDecomposed ? {} : { rotate: { duration: 25, repeat: Infinity, ease: "linear", delay: 1 }, scale: { duration: 6, repeat: Infinity } }}
-                    style={{ rotate: 60 }}
+                    custom={{ x: -200, y: 400, rotate: 0 }}
+                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                    style={{ rotate: 36 }} // 180/5 = 36 deg spacing
                 />
 
-                {/* Ring 3: Orange/Yellow */}
+                {/* Petal 3: Orange */}
                 <motion.div
-                    className="absolute inset-0 border-[20px] border-ninona-orange rounded-[50%] opacity-60 mix-blend-screen"
-                    animate={isDecomposed ? "decomposed" : { rotate: 360, scale: [1, 1.05, 1] }}
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[700px] border-[30px] border-ninona-orange rounded-[50%] opacity-80 mix-blend-screen bg-transparent"
+                    animate={isDecomposed ? "decomposed" : { scale: [1, 1.05, 1], filter: ["blur(2px)", "blur(4px)", "blur(2px)"] }}
                     variants={ringVariants}
-                    custom={{ x: 400, y: 400, rotate: 90 }}
-                    transition={isDecomposed ? {} : { rotate: { duration: 30, repeat: Infinity, ease: "linear", delay: 2 }, scale: { duration: 5.5, repeat: Infinity } }}
-                    style={{ rotate: 120 }}
+                    custom={{ x: 0, y: 400, rotate: -45 }}
+                    transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                    style={{ rotate: 72 }}
+                />
+
+                {/* Petal 4: Yellow */}
+                <motion.div
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[700px] border-[30px] border-ninona-yellow rounded-[50%] opacity-80 mix-blend-screen bg-transparent"
+                    animate={isDecomposed ? "decomposed" : { scale: [1, 1.1, 1], filter: ["blur(2px)", "blur(4px)", "blur(2px)"] }}
+                    variants={ringVariants}
+                    custom={{ x: 200, y: 400, rotate: 90 }}
+                    transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+                    style={{ rotate: 108 }}
+                />
+
+                {/* Petal 5: Blue */}
+                <motion.div
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[700px] border-[30px] border-ninona-blue rounded-[50%] opacity-80 mix-blend-screen bg-transparent"
+                    animate={isDecomposed ? "decomposed" : { scale: [1, 1.05, 1], filter: ["blur(2px)", "blur(4px)", "blur(2px)"] }}
+                    variants={ringVariants}
+                    custom={{ x: 400, y: 400, rotate: 135 }}
+                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+                    style={{ rotate: 144 }}
                 />
             </div>
         </div>

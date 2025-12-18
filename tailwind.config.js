@@ -22,18 +22,18 @@ export default {
       },
       keyframes: {
         'text-gradient': {
-          '0%, 100%': {
+          '0%': {
             'background-size': '200% 200%',
-            'background-position': 'left center'
+            'background-position': '0% center'
           },
-          '50%': {
+          '100%': {
             'background-size': '200% 200%',
-            'background-position': 'right center'
+            'background-position': '200% center'
           },
         },
       },
       animation: {
-        'gradient-slow': 'text-gradient 1s ease infinite',
+        'gradient-slow': 'text-gradient 3s linear infinite',
       },
     },
   },
