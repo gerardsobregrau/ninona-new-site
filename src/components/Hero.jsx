@@ -16,7 +16,7 @@ const Hero = ({ onScrollStart }) => {
         <div className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden z-10 px-4">
 
             {/* Main Content Container */}
-            <div className="z-20 flex flex-col items-center justify-center max-w-5xl mt-10 md:mt-0 relative">
+            <div className="z-20 flex flex-col items-center justify-center w-full max-w-6xl mt-10 md:mt-0 relative">
 
 
 
@@ -46,7 +46,7 @@ const Hero = ({ onScrollStart }) => {
                     onClick={onScrollStart}
                     className="mt-16 md:mt-20 px-10 py-5 bg-black/40 backdrop-blur-md border border-white rounded-full text-white font-poppins font-bold text-sm md:text-base tracking-widest uppercase transition-all duration-300 hover:bg-white hover:text-black hover:border-transparent z-30 shadow-[0_0_15px_rgba(255,255,255,0.1)]"
                 >
-                    <div className="relative h-6 w-64 overflow-hidden">
+                    <div className="relative h-6 w-80 overflow-hidden">
                         <motion.span
                             key={lang}
                             initial={{ y: 20, opacity: 0 }}

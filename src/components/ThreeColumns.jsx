@@ -16,11 +16,11 @@ const Column = ({ title, subtitle, color, delay }) => {
             <h3 className="font-montserrat font-extrabold text-5xl md:text-6xl text-white z-10 uppercase tracking-tighter">
                 {title}
             </h3>
-            <p className="font-playfair font-normal text-2xl md:text-3xl text-gray-400 mt-8 z-10 italic">
+            <p className="font-playfair font-normal text-2xl md:text-3xl text-gray-400 mt-10 z-10 italic">
                 {subtitle}
             </p>
 
-            <button className="mt-8 px-6 py-2 border border-white/30 rounded-full text-sm font-poppins uppercase tracking-widest hover:bg-white hover:text-black transition-all opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0">
+            <button className="mt-14 px-6 py-2 border border-white/30 rounded-full text-sm font-poppins uppercase tracking-widest hover:bg-white hover:text-black transition-all opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0">
                 View More
             </button>
         </motion.div>
