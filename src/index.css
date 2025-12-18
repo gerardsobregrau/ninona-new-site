@@ -23,6 +23,6 @@
 }
 
 .animate-gradient-slow {
-    animation: text-gradient 8s linear infinite;
+    animation: text-gradient 20s linear infinite;
     background-size: 200% auto;
 }

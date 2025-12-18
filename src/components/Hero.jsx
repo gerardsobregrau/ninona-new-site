@@ -18,15 +18,7 @@ const Hero = ({ onScrollStart }) => {
             {/* Main Content Container */}
             <div className="z-20 flex flex-col items-center justify-center max-w-5xl mt-10 md:mt-0 relative">
 
-                {/* Integrated Logo */}
-                <motion.div
-                    initial={{ scale: 0.8, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 1, ease: "easeOut" }}
-                    className="mb-8 md:mb-12 relative z-30"
-                >
-                    <img src="/ninona-logo.png" alt="Ninona Logo" className="h-16 md:h-24 w-auto drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]" />
-                </motion.div>
+
 
                 {/* Main Claim */}
                 <motion.div
