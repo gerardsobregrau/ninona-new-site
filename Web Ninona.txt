@@ -1,0 +1,92 @@
+Objetivo general
+Crear una web moderna, visualmente impactante y con una narrativa interactiva basada en
+movimiento y transición. El elemento central debe ser el átomo, tratado como un elemento
+vivo que tenga movimiento que guíe la experiencia del usuario y estructura el contenido.
+Queremos una web ligera, elegante, con interacciones suaves y microanimaciones,
+inspirada en el estilo visual de drool.es o maas.world , pero con identidad propia.
+1. Home / Pantalla de entrada
+Estética general
+●​ Fondo negro limpio, sin texturas.​
+●​ Sensación de inmersión, minimalismo y elegancia.
+Elemento central animado
+●​ Logo completo (NINONA + átomo) centrado, con algún movimiento o levitación y que
+aparezca el logotipo de Ninona al completo.​
+●​ Microanimación sutil en el átomo (levitación, pulso, brillo…).​
+
+Claim principal
+En grande, poderoso y muy editorial:
+WE SELL 600,000 TICKETS
+IN 16 DIFFERENT COUNTRIES
+
+Requisitos del claim:
+●​ Tipografía moderna y contundente (Montserrat ExtraBold).​
+●​ Números especialmente grandes.​
+●​ Opción 1: números en colores vivos que remitan al átomo.​
+●​ Opción 2: números que cambian suavemente de color en loop.​
+●​ Si no es viable, usar blanco, pero con un grosor extra y tamaño dominante.​
+
+Botón bilingüe dinámico
+CTA central justo debajo:
+DESCUBRE CÓMO LO HACEMOS​
+DISCOVER HOW WE DO IT
+●​ El texto debe alternar entre ES/EN cada 3–4 segundos con fade in / fade out.​
+●​ Botón con animación sutil al hover (glow, ascenso leve o contorno dinámico).​
+●​ Tipografía recomendada: Poppins Bold.​
+
+2. Scroll: transición y narrativa
+Al iniciar el scroll, queremos una experiencia fluida, orgánica y sorprendente.
+Animación clave
+●​ El átomo del logo se descompone en sus 3 partes.​
+●​ Cada parte se desliza hacia su columna correspondiente.​
+●​ Las 3 columnas se alinean verticalmente, estilo limpio y muy visual.​
+
+Encabezados de cada columna
+Columna 1
+
+Columna 2
+
+Columna 3
+
+NINONA (verde/amarillo)
+
+FINA (rosa/lila)
+
+INTERNATIONAL (naranja/amarillo)
+
+Subcopy editable debajo
+Cada bloque con un microtexto, tipo editorial:
+●​ NINONA → COMEDIA​
+●​ FINA → FESTIVALES​
+●​ INTERNATIONAL → MUNDIAL​
+
+Estos textos deben poder ser editables desde CMS.
+Cada columna debe ser clicable y enlazar a la web correspondiente.
+
+Estilo tipográfico
+●​ Titulares: Montserrat ExtraBold​
+●​ Subcopy: Playfair Display o Lora (estilo serif elegante, contraste editorial).​
+Generar contraste potente entre modernidad → (titulares) y clásico → (subcopy).​
+
+3. Look general
+Queremos un diseño:
+●​ Minimalista, pero con personalidad vibrante.​
+●​ Interactividad fluida, sin saturar.​
+●​ Atemporal, moderno y con toques de color estratégicos.​
+●​ Animaciones suaves tipo easing, nada brusco.​
+●​ Gran protagonismo del negro, blancos contundentes y colores del átomo como
+acentos.​
+
+4. Requisitos técnicos adicionales
+●​ Animaciones fluidas y optimizadas (GSAP o similar).​
+●​ Diseño responsive sin perder calidad en las transiciones.​
+●​ CMS editable para textos de los bloques.​
+●​ Carga rápida pese a las animaciones (usar lazy load y optimización).​
+
+Resultado esperado
+Una web impactante, moderna y dinámica, donde el átomo no sea un símbolo estático,
+sino el hilo conductor que da ritmo a la experiencia. Una interfaz que diga desde el primer
+segundo:​
+“Trabajamos internacionalmente, a gran escala, y con una identidad muy marcada.”
+Que nos sirva para potenciar y posicionar la marca NINONA.
+
+
