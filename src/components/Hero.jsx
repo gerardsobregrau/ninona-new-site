@@ -9,7 +9,7 @@ const Hero = ({ onScrollStart }) => {
         <div className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden z-10 px-4">
 
             {/* Main Content Container */}
-            <div className="z-20 flex flex-col items-center justify-center w-full max-w-6xl mt-10 md:mt-0 relative">
+            <div className="z-50 flex flex-col items-center justify-center w-full max-w-6xl mt-10 md:mt-0 relative">
 
                 {/* Main Claim */}
                 <motion.div
