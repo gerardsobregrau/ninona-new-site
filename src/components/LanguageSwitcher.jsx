@@ -19,8 +19,8 @@ const LanguageSwitcher = () => {
                 {/* ES Option */}
                 <span
                     className={`text-xs font-poppins font-bold tracking-widest transition-all duration-300 ${language === 'es'
-                            ? 'text-white scale-110'
-                            : 'text-gray-500 scale-100'
+                        ? 'text-white scale-110'
+                        : 'text-gray-500 scale-100'
                         }`}
                 >
                     ES
@@ -32,8 +32,8 @@ const LanguageSwitcher = () => {
                 {/* EN Option */}
                 <span
                     className={`text-xs font-poppins font-bold tracking-widest transition-all duration-300 ${language === 'en'
-                            ? 'text-white scale-110'
-                            : 'text-gray-500 scale-100'
+                        ? 'text-white scale-110'
+                        : 'text-gray-500 scale-100'
                         }`}
                 >
                     EN
@@ -44,8 +44,8 @@ const LanguageSwitcher = () => {
                     className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-[#e6007e] to-[#f39200]"
                     initial={false}
                     animate={{
-                        x: language === 'es' ? 8 : 32,
-                        width: 20
+                        x: language === 'es' ? 12 : 52,
+                        width: 18
                     }}
                     transition={{ type: 'spring', stiffness: 300, damping: 30 }}
                 />
