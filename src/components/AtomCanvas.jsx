@@ -2,77 +2,57 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const AtomCanvas = ({ isDecomposed }) => {
-    // Variants for the 3 atom rings
-    const ringVariants = {
-        initial: {
-            scale: 1,
-            opacity: 1,
-            x: 0,
-            y: 0,
-            rotate: 0,
-            transition: { duration: 1, ease: 'easeInOut' }
-        },
-        decomposed: (custom) => ({
-            scale: 0.5,
-            x: custom.x,
-            y: custom.y,
-            rotate: custom.rotate,
-            transition: { duration: 0.8, ease: 'easeInOut' }
-        })
-    };
+    // Ninona brand colors
+    const colors = [
+        '#aacc00', // green
+        '#e6007e', // pink
+        '#f39200', // orange
+        '#ffed00', // yellow
+        '#009fe3'  // blue
+    ];
+
+    // Single large flower size
+    const size = 1000;
 
     return (
-        <div className={`fixed inset-0 pointer-events-none z-0 flex items-center justify-center transition-opacity duration-1000 ${isDecomposed ? 'opacity-100' : 'opacity-40'}`}>
-            <div className="relative w-[800px] h-[800px]">
-                {/* Petal 1: Green */}
-                <motion.div
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[700px] border-[30px] border-ninona-green rounded-[50%] opacity-80 mix-blend-screen bg-transparent"
-                    animate={isDecomposed ? "decomposed" : { scale: [1, 1.05, 1], filter: ["blur(2px)", "blur(4px)", "blur(2px)"] }}
-                    variants={ringVariants}
-                    custom={{ x: -400, y: 400, rotate: 45 }}
-                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                    style={{ rotate: 0 }}
-                />
+        <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden flex items-center justify-center">
+            {/* Subtle radial gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-radial from-transparent via-black/10 to-black/40" />
 
-                {/* Petal 2: Pink */}
-                <motion.div
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[700px] border-[30px] border-ninona-pink rounded-[50%] opacity-80 mix-blend-screen bg-transparent"
-                    animate={isDecomposed ? "decomposed" : { scale: [1, 1.1, 1], filter: ["blur(2px)", "blur(4px)", "blur(2px)"] }}
-                    variants={ringVariants}
-                    custom={{ x: -200, y: 400, rotate: 0 }}
-                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                    style={{ rotate: 36 }} // 180/5 = 36 deg spacing
-                />
-
-                {/* Petal 3: Orange */}
-                <motion.div
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[700px] border-[30px] border-ninona-orange rounded-[50%] opacity-80 mix-blend-screen bg-transparent"
-                    animate={isDecomposed ? "decomposed" : { scale: [1, 1.05, 1], filter: ["blur(2px)", "blur(4px)", "blur(2px)"] }}
-                    variants={ringVariants}
-                    custom={{ x: 0, y: 400, rotate: -45 }}
-                    transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                    style={{ rotate: 72 }}
-                />
-
-                {/* Petal 4: Yellow */}
-                <motion.div
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[700px] border-[30px] border-ninona-yellow rounded-[50%] opacity-80 mix-blend-screen bg-transparent"
-                    animate={isDecomposed ? "decomposed" : { scale: [1, 1.1, 1], filter: ["blur(2px)", "blur(4px)", "blur(2px)"] }}
-                    variants={ringVariants}
-                    custom={{ x: 200, y: 400, rotate: 90 }}
-                    transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-                    style={{ rotate: 108 }}
-                />
-
-                {/* Petal 5: Blue */}
-                <motion.div
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[700px] border-[30px] border-ninona-blue rounded-[50%] opacity-80 mix-blend-screen bg-transparent"
-                    animate={isDecomposed ? "decomposed" : { scale: [1, 1.05, 1], filter: ["blur(2px)", "blur(4px)", "blur(2px)"] }}
-                    variants={ringVariants}
-                    custom={{ x: 400, y: 400, rotate: 135 }}
-                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-                    style={{ rotate: 144 }}
-                />
+            {/* Single centered flower */}
+            <div
+                className="relative transition-all duration-1000"
+                style={{
+                    width: `${size}px`,
+                    height: `${size}px`,
+                    opacity: isDecomposed ? 0.4 : 0.25
+                }}
+            >
+                {/* 5 petals forming the Ninona flower */}
+                {[0, 1, 2, 3, 4].map((i) => (
+                    <motion.div
+                        key={i}
+                        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-[50%] mix-blend-screen bg-transparent"
+                        style={{
+                            width: `${size * 0.375}px`,
+                            height: `${size * 0.875}px`,
+                            borderWidth: `${size * 0.04}px`,
+                            borderColor: colors[i],
+                            rotate: i * 72, // 360/5 = 72 degrees
+                        }}
+                        animate={{
+                            scale: [1, 1.1, 1],
+                            rotate: (i * 72) + [0, 360, 720],
+                            filter: ["blur(2px)", "blur(5px)", "blur(2px)"]
+                        }}
+                        transition={{
+                            duration: 20 + (i * 2),
+                            repeat: Infinity,
+                            ease: "linear",
+                            delay: i * 0.5
+                        }}
+                    />
+                ))}
             </div>
         </div>
     );
