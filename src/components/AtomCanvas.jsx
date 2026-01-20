@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'; // eslint-disable-line no-unused-vars
 
 const AtomCanvas = ({ isDecomposed }) => {
     // Variants for the atom rings
@@ -23,10 +23,10 @@ const AtomCanvas = ({ isDecomposed }) => {
 
     return (
         <div className={`fixed inset-0 pointer-events-none z-0 transition-opacity duration-1000 ${isDecomposed ? 'opacity-100' : 'opacity-40'}`}>
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[min(90vw,90vh,1400px)] h-[min(90vw,90vh,1400px)]">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100vmin] h-[100vmin]">
                 {/* Petal 1: Green */}
                 <motion.div
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40%] h-[85%] border-[3vw] max-border-[40px] border-ninona-green rounded-[50%] opacity-80 mix-blend-screen bg-transparent"
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[45%] h-[85%] border-[3vw] max-border-[40px] border-ninona-green rounded-[50%] opacity-80 mix-blend-screen bg-transparent"
                     animate={isDecomposed ? "decomposed" : { scale: [1, 1.05, 1], filter: ["blur(2px)", "blur(4px)", "blur(2px)"] }}
                     variants={ringVariants}
                     custom={{ x: -400, y: 400, rotate: 45 }}
@@ -36,7 +36,7 @@ const AtomCanvas = ({ isDecomposed }) => {
 
                 {/* Petal 2: Pink */}
                 <motion.div
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40%] h-[85%] border-[3vw] max-border-[40px] border-ninona-pink rounded-[50%] opacity-80 mix-blend-screen bg-transparent"
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[45%] h-[85%] border-[3vw] max-border-[40px] border-ninona-pink rounded-[50%] opacity-80 mix-blend-screen bg-transparent"
                     animate={isDecomposed ? "decomposed" : { scale: [1, 1.1, 1], filter: ["blur(2px)", "blur(4px)", "blur(2px)"] }}
                     variants={ringVariants}
                     custom={{ x: -200, y: 400, rotate: 0 }}
@@ -46,7 +46,7 @@ const AtomCanvas = ({ isDecomposed }) => {
 
                 {/* Petal 3: Orange */}
                 <motion.div
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40%] h-[85%] border-[3vw] max-border-[40px] border-ninona-orange rounded-[50%] opacity-80 mix-blend-screen bg-transparent"
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[45%] h-[85%] border-[3vw] max-border-[40px] border-ninona-orange rounded-[50%] opacity-80 mix-blend-screen bg-transparent"
                     animate={isDecomposed ? "decomposed" : { scale: [1, 1.05, 1], filter: ["blur(2px)", "blur(4px)", "blur(2px)"] }}
                     variants={ringVariants}
                     custom={{ x: 0, y: 400, rotate: -45 }}
@@ -56,7 +56,7 @@ const AtomCanvas = ({ isDecomposed }) => {
 
                 {/* Petal 4: Yellow */}
                 <motion.div
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40%] h-[85%] border-[3vw] max-border-[40px] border-ninona-yellow rounded-[50%] opacity-80 mix-blend-screen bg-transparent"
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[45%] h-[85%] border-[3vw] max-border-[40px] border-ninona-yellow rounded-[50%] opacity-80 mix-blend-screen bg-transparent"
                     animate={isDecomposed ? "decomposed" : { scale: [1, 1.1, 1], filter: ["blur(2px)", "blur(4px)", "blur(2px)"] }}
                     variants={ringVariants}
                     custom={{ x: 200, y: 400, rotate: 90 }}
@@ -66,7 +66,7 @@ const AtomCanvas = ({ isDecomposed }) => {
 
                 {/* Petal 5: Blue */}
                 <motion.div
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40%] h-[85%] border-[3vw] max-border-[40px] border-ninona-blue rounded-[50%] opacity-80 mix-blend-screen bg-transparent"
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[45%] h-[85%] border-[3vw] max-border-[40px] border-ninona-blue rounded-[50%] opacity-80 mix-blend-screen bg-transparent"
                     animate={isDecomposed ? "decomposed" : { scale: [1, 1.05, 1], filter: ["blur(2px)", "blur(4px)", "blur(2px)"] }}
                     variants={ringVariants}
                     custom={{ x: 400, y: 400, rotate: 135 }}

@@ -1,8 +1,9 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
 const LanguageContext = createContext();
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useLanguage = () => {
     const context = useContext(LanguageContext);
     if (!context) {
@@ -11,7 +12,7 @@ export const useLanguage = () => {
     return context;
 };
 
-export const translations = {
+const translations = {
     es: {
         hero: {
             weSell: 'Vendemos',
