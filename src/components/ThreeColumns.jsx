@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../context/LanguageContext';
 
-const Column = ({ title, subtitle, color, delay }) => {
+const Column = ({ title, subtitle, buttonText, color, delay }) => {
     return (
         <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -21,18 +22,38 @@ const Column = ({ title, subtitle, color, delay }) => {
             </p>
 
             <button className="mt-14 px-6 py-2 border border-white/30 rounded-full text-sm font-poppins uppercase tracking-widest hover:bg-white hover:text-black transition-all opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0">
-                View More
+                {buttonText}
             </button>
         </motion.div>
     );
 };
 
 const ThreeColumns = () => {
+    const { t } = useLanguage();
+
     return (
         <div className="relative w-full min-h-screen flex flex-col md:flex-row z-10 bg-transparent pt-20 px-4 md:px-0">
-            <Column title="Ninona" subtitle="Comedia" color="#aacc00" delay={0.2} />
-            <Column title="Fina" subtitle="Festivales" color="#e6007e" delay={0.4} />
-            <Column title="International" subtitle="Mundial" color="#f39200" delay={0.6} />
+            <Column
+                title={t.columns.ninona.title}
+                subtitle={t.columns.ninona.subtitle}
+                buttonText={t.columns.ninona.button}
+                color="#aacc00"
+                delay={0.2}
+            />
+            <Column
+                title={t.columns.fina.title}
+                subtitle={t.columns.fina.subtitle}
+                buttonText={t.columns.fina.button}
+                color="#e6007e"
+                delay={0.4}
+            />
+            <Column
+                title={t.columns.international.title}
+                subtitle={t.columns.international.subtitle}
+                buttonText={t.columns.international.button}
+                color="#f39200"
+                delay={0.6}
+            />
         </div>
     );
 };

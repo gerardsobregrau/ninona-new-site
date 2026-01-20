@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import { LanguageProvider } from './context/LanguageContext';
 import AtomCanvas from './components/AtomCanvas';
 import Hero from './components/Hero';
 import ThreeColumns from './components/ThreeColumns';
 import Footer from './components/Footer';
+import LanguageSwitcher from './components/LanguageSwitcher';
 
-function App() {
+const MainContent = () => {
   const [isAtomDecomposed, setIsAtomDecomposed] = useState(false);
 
   useEffect(() => {
@@ -32,6 +35,9 @@ function App() {
 
   return (
     <div className="bg-black min-h-screen w-full relative">
+      {/* Language Switcher */}
+      <LanguageSwitcher />
+
       {/* Background Atom Animation Layer */}
       <AtomCanvas isDecomposed={isAtomDecomposed} />
 
@@ -48,6 +54,19 @@ function App() {
         <Footer />
       </main>
     </div>
+  );
+};
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/:lang" element={
+        <LanguageProvider>
+          <MainContent />
+        </LanguageProvider>
+      } />
+      <Route path="/" element={<Navigate to="/es" replace />} />
+    </Routes>
   );
 }
 
