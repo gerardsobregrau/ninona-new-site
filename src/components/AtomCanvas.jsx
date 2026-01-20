@@ -52,9 +52,9 @@ const AtomCanvas = ({ isDecomposed }) => {
                     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[45%] h-[85%] border-[3vw] max-border-[40px] border-ninona-pink rounded-[50%] opacity-80 mix-blend-screen bg-transparent"
                     animate={isDecomposed ? "decomposed" : "formed"}
                     variants={ringVariants}
-                    custom={{ x: -200, y: 0, rotate: 0, initialRotate: 36, duration: 5, delay: 0.5 }}
+                    custom={{ x: -200, y: 0, rotate: 0, initialRotate: 72, duration: 5, delay: 0.5 }}
                     transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                    style={{ rotate: 36 }}
+                    style={{ rotate: 72 }}
                 />
 
                 {/* Petal 3: Orange */}
@@ -62,9 +62,9 @@ const AtomCanvas = ({ isDecomposed }) => {
                     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[45%] h-[85%] border-[3vw] max-border-[40px] border-ninona-orange rounded-[50%] opacity-80 mix-blend-screen bg-transparent"
                     animate={isDecomposed ? "decomposed" : "formed"}
                     variants={ringVariants}
-                    custom={{ x: 0, y: 0, rotate: -45, initialRotate: 72, duration: 4.5, delay: 1 }}
+                    custom={{ x: 0, y: 0, rotate: -45, initialRotate: 144, duration: 4.5, delay: 1 }}
                     transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                    style={{ rotate: 72 }}
+                    style={{ rotate: 144 }}
                 />
 
                 {/* Petal 4: Yellow */}
@@ -72,9 +72,9 @@ const AtomCanvas = ({ isDecomposed }) => {
                     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[45%] h-[85%] border-[3vw] max-border-[40px] border-ninona-yellow rounded-[50%] opacity-80 mix-blend-screen bg-transparent"
                     animate={isDecomposed ? "decomposed" : "formed"}
                     variants={ringVariants}
-                    custom={{ x: 200, y: 0, rotate: 90, initialRotate: 108, duration: 5.5, delay: 1.5 }}
+                    custom={{ x: 200, y: 0, rotate: 90, initialRotate: 216, duration: 5.5, delay: 1.5 }}
                     transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-                    style={{ rotate: 108 }}
+                    style={{ rotate: 216 }}
                 />
 
                 {/* Petal 5: Blue */}
@@ -82,9 +82,9 @@ const AtomCanvas = ({ isDecomposed }) => {
                     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[45%] h-[85%] border-[3vw] max-border-[40px] border-ninona-blue rounded-[50%] opacity-80 mix-blend-screen bg-transparent"
                     animate={isDecomposed ? "decomposed" : "formed"}
                     variants={ringVariants}
-                    custom={{ x: 400, y: 0, rotate: 135, initialRotate: 144, duration: 5, delay: 2 }}
+                    custom={{ x: 400, y: 0, rotate: 135, initialRotate: 288, duration: 5, delay: 2 }}
                     transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-                    style={{ rotate: 144 }}
+                    style={{ rotate: 288 }}
                 />
             </div>
         </div>
