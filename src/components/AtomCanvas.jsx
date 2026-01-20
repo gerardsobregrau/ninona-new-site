@@ -22,8 +22,8 @@ const AtomCanvas = ({ isDecomposed }) => {
     };
 
     return (
-        <div className={`fixed inset-0 pointer-events-none z-0 flex items-center justify-center transition-opacity duration-1000 ${isDecomposed ? 'opacity-100' : 'opacity-40'}`}>
-            <div className="relative w-[90vw] h-[90vw] max-w-[1400px] max-h-[1400px]">
+        <div className={`fixed inset-0 pointer-events-none z-0 transition-opacity duration-1000 ${isDecomposed ? 'opacity-100' : 'opacity-40'}`}>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[min(90vw,90vh,1400px)] h-[min(90vw,90vh,1400px)]">
                 {/* Petal 1: Green */}
                 <motion.div
                     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40%] h-[85%] border-[3vw] max-border-[40px] border-ninona-green rounded-[50%] opacity-80 mix-blend-screen bg-transparent"
